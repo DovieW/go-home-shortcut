@@ -1,15 +1,13 @@
-chrome.action.onClicked.addListener((tab) => {
-  navigateToHomepage(tab);
-});
-
+// Listen for when the user presses the keyboard shortcut
 chrome.commands.onCommand.addListener((command) => {
-  if (command === "_execute_browser_action") {
+  if (command === "go_home") {
     chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
       navigateToHomepage(tabs[0]);
     });
   }
 });
 
+// Function to navigate to the homepage
 function navigateToHomepage(tab) {
   const url = new URL(tab.url);
   const homepage = url.protocol + "//" + url.hostname;

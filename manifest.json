@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Homepage Navigator",
-  "description": "Simple Chrome Extension which adds a shortcut which attempts to redirect you to a site's homepage.",
+  "name": "Go Home Shortcut",
+  "description": "Adds a shortcut which attempts to redirect you to a site's homepage.",
   "version": "0.1.0",
   "action": {
     "default_icon": {
@@ -15,10 +15,11 @@
     "service_worker": "background.js"
   },
   "commands": {
-    "_execute_browser_action": {
+    "go_home": {
       "suggested_key": {
-        "default": "Ctrl+H"
-      }
+        "default": "Ctrl+Shift+H"
+      },
+      "description": "Go to homepage"
     }
   }
 }

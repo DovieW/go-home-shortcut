@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Homepage Navigator",
+  "description": "Simple Chrome Extension which adds a shortcut which attempts to redirect you to a site's homepage.",
+  "version": "0.1.0",
+  "action": {
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+  "permissions": ["activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+H"
+      }
+    }
+  }
+}

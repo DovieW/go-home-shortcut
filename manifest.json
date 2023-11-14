@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Go Home Shortcut",
   "description": "Adds a shortcut which attempts to redirect you to a site's homepage.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "action": {
     "default_icon": {
       "16": "images/icon16.png",
